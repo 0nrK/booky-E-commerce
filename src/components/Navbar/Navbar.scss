@@ -1,0 +1,55 @@
+.navbarContainer {
+  background-color: darkslateblue;
+  color: white;
+  height: 3rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  a {
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+    color: white;
+  }
+}
+
+.navbarWrapper {
+  width: 50vw;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.navbarLeft {
+  display: flex;
+  align-items: center;
+}
+
+.navbarRight {
+  display: flex;
+  align-items: center;
+  button {
+    padding: 8px;
+    border: 3px solid white;
+    border-radius: 12px;
+    background-color: transparent;
+    display: flex;
+    color: white;
+    font-weight: bold;
+    align-items: center;
+    outline: none;
+    cursor: pointer;
+    svg,
+    path {
+      height: 1.5rem;
+      margin-right: -1px;
+    }
+  }
+  svg,
+  path {
+    height: 1.8rem;
+    cursor: pointer;
+    margin-right: 1.2rem;
+  }
+}
