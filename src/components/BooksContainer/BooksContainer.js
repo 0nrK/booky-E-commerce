@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Book from '../Book/Book';
+import { Link } from "react-router-dom"
 import "./BooksContainer.scss"
 const BooksContainer = () => {
 
@@ -16,7 +17,11 @@ const BooksContainer = () => {
     }, [])
 
     return <div className="booksContainer">
-        {data.map(book => <Book key={book._id} props={book} />)}
+        {data.map(book => {
+            return (
+                <Book key={book._id} props={book} />
+            )
+        })}
     </div >;
 };
 

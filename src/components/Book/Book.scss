@@ -1,11 +1,12 @@
 .bookWrapper {
   border: 1px solid lightgray;
-  width: 200px;
   border-radius: 8px;
-  margin: 0.5rem 0.5rem;
+  width: 30%;
+  margin: 0.5rem auto;
   cursor: pointer;
   transform: all;
   transition: 1s;
+
   img {
     height: 200px;
     width: 200px;
@@ -24,6 +25,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      color: white;
     }
   }
 }
@@ -35,20 +37,20 @@
   }
 }
 .bookBottom {
-  background-color: rgb(231, 231, 231);
+  background: rgba(0, 0, 0, 0.04);
   height: 75px;
-  width: 200px;
-  padding: 12px;
+  width: full;
+  padding: 0.8rem;
   border-radius: 8px;
   p {
     font-size: 1.25rem;
     margin-bottom: 6px;
   }
   span {
-    margin-top: 8px;
-    color: green;
+    margin-top: 24px;
     font-weight: bold;
     font-size: 1rem;
+    opacity: 0.5;
   }
 }
 
@@ -59,6 +61,7 @@
   height: 75px;
   padding: 12px;
   border-radius: 8px;
+  border: none;
   svg,
   path {
     width: 40px;

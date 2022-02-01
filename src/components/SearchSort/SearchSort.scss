@@ -2,16 +2,34 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+  width: 100%;
   svg,
   path {
     height: 1.5rem;
   }
+  form {
+    position: relative;
+    width: 25vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    margin-top: 0;
+    button {
+      position: absolute;
+      right: 0;
+      background-color: transparent;
+      color: lightgray;
+      padding: 0.8rem;
+      margin-top: 0;
+    }
+  }
   input {
-    margin-left: 1rem;
     outline: none;
     padding: 0.8rem;
     font-size: 1.2rem;
     border: 1px solid lightgray;
+    margin-top: 0;
     border-radius: 8px;
     width: 25vw;
   }

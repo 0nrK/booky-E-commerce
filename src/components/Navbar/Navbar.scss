@@ -53,3 +53,24 @@
     margin-right: 1.2rem;
   }
 }
+
+.navbarCart {
+  width: auto;
+
+  position: relative;
+  .navbarCartQty {
+    background-color: green;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    border-radius: 100%;
+    width: 20px;
+    color: white;
+    height: 20px;
+    opacity: 0.9;
+    position: absolute;
+    margin-left: 15px;
+    bottom: 0;
+  }
+}
