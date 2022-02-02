@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import "./App.scss"
 import {
   BrowserRouter,
@@ -12,22 +12,38 @@ import AddBookPage from "./pages/AddBookPage"
 import Cart from './pages/Cart';
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
-
-
+import ItemPage from './pages/ItemPage';
+import { fetchItem } from './redux/itemSlice';
+import { useSelector, useDispatch } from "react-redux"
 const App = () => {
-  return <div className="container">
 
-    <BrowserRouter>
-      <ToastContainer />
-      <Routes>
-        <Route exact path="/" element={<Home />} />
-        <Route path="/login" element={<LoginPage />} />
-        <Route path="/register" element={<RegisterPage />} />
-        <Route path="/cart" element={<Cart />} />
-        <Route path="/addbook" element={<AddBookPage />} />
-      </Routes>
-    </BrowserRouter>
-  </div>;
+  const dispatch = useDispatch()
+  const items = useSelector(state => state.items)
+
+  useEffect(() => {
+    dispatch(fetchItem())
+  }, [])
+  return (
+    <>
+      {
+        items ? <h1>Loading...</h1> :
+          <div className="container">
+            <BrowserRouter>
+              <ToastContainer />
+              <Routes>
+                <Route exact path="/" element={<Home />} />
+                <Route path="/login" element={<LoginPage />} />
+                <Route path="/register" element={<RegisterPage />} />
+                <Route path="/cart" element={<Cart />} />
+                <Route path="/itempage" element={<ItemPage />} />
+                <Route path="/addbook" element={<AddBookPage />} />
+              </Routes>
+            </BrowserRouter>
+          </div>
+      }
+    </>
+
+  )
 };
 
 export default App;

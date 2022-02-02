@@ -1,14 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import CartItem from '../components/CartItem/CartItem';
 import Navbar from '../components/Navbar/Navbar';
 import "./Cart.scss"
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 
 
 const Cart = () => {
 
-    const items = useSelector((state) => state.cart.items);
-    console.log(items)
+
+    const items = useSelector((state) => state.cart.cartItems)
+    console.log(items);
     return <main className="cart">
         <Navbar />
         <div className="cartWrapper">
