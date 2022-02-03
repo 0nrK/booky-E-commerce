@@ -23,15 +23,15 @@ const itemSlice = createSlice({
     reducers: {},
     extraReducers: (builder) => {
         builder.addCase(fetchItem.pending, (state, action) => {
-            state.loading = true;
+            state.isLoading = true;
             state.error = ""
         })
         builder.addCase(fetchItem.fulfilled, (state, action) => {
-            state.loading = false;
+            state.isLoading = false;
             state.items = action.payload
         })
         builder.addCase(fetchItem.rejected, async (state, action) => {
-            state.loading = false
+            state.isLoading = false
             state.error = "SOMETHING WENT WRONG WHEN FETCHING ITEMS"
         })
 

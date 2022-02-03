@@ -25,7 +25,6 @@ const cartSlice = createSlice({
         clearCart(state, action) {
             state.cartItems = []
             toast.error("Cart cleared", { position: "bottom-left" });
-
         }
     }
 })

@@ -4,7 +4,6 @@ import Navbar from '../components/Navbar/Navbar';
 
 const AddBook = () => {
     return <div>
-        <Navbar />
         <AddNewBook />
     </div>;
 };

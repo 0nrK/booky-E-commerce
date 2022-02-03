@@ -15,6 +15,7 @@ import { ToastContainer } from "react-toastify";
 import ItemPage from './pages/ItemPage';
 import { fetchItem } from './redux/itemSlice';
 import { useSelector, useDispatch } from "react-redux"
+import Navbar from './components/Navbar/Navbar';
 const App = () => {
 
   const dispatch = useDispatch()
@@ -23,21 +24,26 @@ const App = () => {
   useEffect(() => {
     dispatch(fetchItem())
   }, [])
+
+
   return (
     <>
       {
         items ? <h1>Loading...</h1> :
           <div className="container">
             <BrowserRouter>
+              <Navbar />
               <ToastContainer />
-              <Routes>
-                <Route exact path="/" element={<Home />} />
-                <Route path="/login" element={<LoginPage />} />
-                <Route path="/register" element={<RegisterPage />} />
-                <Route path="/cart" element={<Cart />} />
-                <Route path="/itempage" element={<ItemPage />} />
-                <Route path="/addbook" element={<AddBookPage />} />
-              </Routes>
+              <div className="containerBottom">
+                <Routes>
+                  <Route exact path="/" element={<Home />} />
+                  <Route path="/login" element={<LoginPage />} />
+                  <Route path="/register" element={<RegisterPage />} />
+                  <Route path="/cart" element={<Cart />} />
+                  <Route path="/itempage" element={<ItemPage />} />
+                  <Route path="/addbook" element={<AddBookPage />} />
+                </Routes>
+              </div>
             </BrowserRouter>
           </div>
       }

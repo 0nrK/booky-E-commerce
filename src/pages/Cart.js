@@ -9,9 +9,7 @@ const Cart = () => {
 
 
     const items = useSelector((state) => state.cart.cartItems)
-    console.log(items);
     return <main className="cart">
-        <Navbar />
         <div className="cartWrapper">
             <h1>Cart</h1>
             <div className="cartHead">

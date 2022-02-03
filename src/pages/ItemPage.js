@@ -7,7 +7,6 @@ import Navbar from '../components/Navbar/Navbar';
 
 const ItemPage = () => {
     return <div>
-        <Navbar />
         <ItemInfo />
         <ItemSlide />
         <ItemComments />

@@ -8,7 +8,6 @@ import BooksContainer from '../components/BooksContainer/BooksContainer';
 
 const Home = () => {
     return <div className="home">
-        <Navbar />
         <div className="homeRight">
             <Sidebar />
             <div className="homeContent">
