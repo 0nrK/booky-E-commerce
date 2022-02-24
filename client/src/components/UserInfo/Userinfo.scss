@@ -1,0 +1,12 @@
+.userInfoContainer {
+  display: flex;
+  flex-direction: column;
+  label {
+    font-size: 1.3rem;
+    margin-top: 12px;
+  }
+  input {
+    padding: 0.6rem;
+    font-size: 1.2rem;
+  }
+}

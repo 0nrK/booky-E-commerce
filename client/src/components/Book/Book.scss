@@ -1,0 +1,71 @@
+.bookWrapper {
+  border: 1px solid lightgray;
+  border-radius: 8px;
+  margin: 0.5rem 1rem 0.5rem 0;
+  cursor: pointer;
+  transform: all;
+  transition: 0.2s;
+  max-width: 10vw;
+  img {
+    height: 200px;
+    width: 180px;
+    object-fit: contain;
+  }
+  &:hover {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+      rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    border: 2px solid aquamarine;
+    img {
+      backdrop-filter: blur(5px);
+    }
+    .bookBottom {
+      display: none;
+    }
+    .bookBottomFocus {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      width: 100%;
+    }
+  }
+}
+
+.bookTop {
+  position: relative;
+  svg,
+  path {
+  }
+}
+.bookBottom {
+  background: rgba(0, 0, 0, 0.04);
+  height: 75px;
+  width: full;
+  padding: 0.8rem;
+  border-radius: 8px;
+  p {
+    font-size: 1.25rem;
+    margin-bottom: 6px;
+  }
+  span {
+    margin-top: 24px;
+    font-weight: bold;
+    font-size: 1rem;
+    opacity: 0.5;
+  }
+}
+
+.bookBottomFocus {
+  display: none;
+  background-color: aquamarine;
+  width: 200px;
+  height: 75px;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  svg,
+  path {
+    width: 40px;
+    height: 40px;
+  }
+}

@@ -1,0 +1,3 @@
+[submodule "booky-E-commerce"]
+	path = booky-E-commerce
+	url = git@github.com:0nrK/booky-E-commerce.git

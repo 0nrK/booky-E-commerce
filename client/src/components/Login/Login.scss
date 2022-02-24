@@ -1,0 +1,56 @@
+.loginContainer {
+  h1 {
+    margin: 2rem;
+    font-style: italic;
+    font-size: 3rem;
+    color: indigo;
+    text-align: center;
+  }
+}
+
+.loginLinks {
+  display: flex;
+  justify-content: center;
+  a {
+    text-decoration: none;
+  }
+  #register {
+    font-size: 2rem;
+    padding: 8px;
+    text-decoration: none;
+    color: black;
+  }
+  #login {
+    font-size: 2rem;
+    padding: 8px;
+    color: indigo;
+    border-bottom: 3px solid indigo;
+  }
+}
+
+.loginForm {
+  display: flex;
+  flex-direction: column;
+  width: 20vw;
+  margin: 3rem auto;
+  input {
+    width: 20vw;
+    padding: 12px;
+    border: 1px solid lightgray;
+    border-radius: 8px;
+    outline: none;
+    margin-top: 12px;
+  }
+  button {
+    width: 20vw;
+    margin-top: 12px;
+    padding: 1rem;
+    background-color: indigo;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+  }
+}
