@@ -1,5 +1,5 @@
 .cartWrapper {
-  max-width: 50vw;
+  max-width: 43vw;
   margin: 0 auto;
   font-weight: bold;
   h1 {
@@ -15,6 +15,7 @@
 .cartHead {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   text-align: center;
   margin-bottom: 1rem;
 }
@@ -24,18 +25,5 @@
   text-align: center;
 }
 .cartHeadName {
-  margin-left: 2.3rem;
   text-align: center;
-}
-.cartHeadCategory {
-  margin-left: 8rem;
-}
-.cartHeadPrice {
-  margin-left: 4rem;
-}
-.cartHeadQuantity {
-  margin-left: 7rem;
-}
-.cartHeadTotal {
-  margin-left: 6.4rem;
 }

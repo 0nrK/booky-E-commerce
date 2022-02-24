@@ -8,14 +8,11 @@ import BooksContainer from '../components/BooksContainer/BooksContainer';
 
 const Home = () => {
     return <div className="home">
-        <div className="homeRight">
-            <Sidebar />
-            <div className="homeContent">
-                <SearchSort />
-                <BooksContainer />
-            </div>
-        </div>
-    </div>;
+        <Sidebar />
+        <SearchSort />
+        <BooksContainer />
+
+    </div >;
 };
 
 export default Home;

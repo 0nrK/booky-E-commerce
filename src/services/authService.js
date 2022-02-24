@@ -3,10 +3,10 @@ import axios from "axios"
 const API_URL = "http://localhost:5000/auth/"
 
 
-const register = (username, password) => {
-    return axios.post(API_URL + "register", { username, password })
+export const register = async (data) => {
+    return axios.post(API_URL + "register", data)
 }
-const login = (username, password) => {
+export const login = (username, password) => {
     return axios.post(API_URL + "login", { username, password })
         .then((res) => {
             if (res.data.accessToken) {
@@ -16,7 +16,7 @@ const login = (username, password) => {
         })
 }
 
-const logout = () => {
+export const logout = () => {
     localStorage.removeItem("user")
 }
 

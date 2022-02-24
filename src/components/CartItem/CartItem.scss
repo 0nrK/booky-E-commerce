@@ -1,8 +1,8 @@
 .cartItem {
   display: flex;
   width: 100%;
-  margin-top: 12px;
   flex-direction: row;
+  justify-content: space-between;
   align-items: center;
   border: 1px solid lightgray;
   border-radius: 8px;
@@ -10,7 +10,6 @@
   img {
     width: 4vw;
     object-fit: cover;
-    margin-right: 2rem;
   }
   span {
     margin-right: 3px;
@@ -20,21 +19,11 @@
 .bookName {
   text-decoration: underline;
   font-weight: bold;
-  margin-right: 2rem;
-}
-.bookCategory {
-  margin: 0 2rem;
-}
-
-.bookPrice {
-  margin-left: 4rem;
 }
 
 .cartCounter {
   display: flex;
   flex-direction: row;
-  margin-left: 5.5rem;
-  margin-right: 2rem;
   input {
     border: none;
     outline: none;
@@ -69,12 +58,10 @@
 }
 
 .cartTotal {
-  margin-left: 2.8rem;
   font-size: 1.2rem;
 }
 
 .cartCloseBtn {
-  margin-left: 3rem;
   align-self: center;
   height: 20px;
   width: 20px;

@@ -3,9 +3,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-
 import "./Register.scss"
-import { register } from '../../redux/authSlice';
 
 const Register = () => {
 
@@ -33,7 +31,14 @@ const Register = () => {
             password: regFormData.password,
         }
 
-        dispatch(register({ regData }))
+        try {
+            await axios.post("http://localhost:5000/auth/register", regData)
+                .then((res) => console.log(res))
+                .catch((err) => console.log(err))
+
+        } catch (err) {
+            console.log(err);
+        }
 
 
 

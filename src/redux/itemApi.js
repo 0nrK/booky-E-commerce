@@ -7,7 +7,11 @@ export const itemApi = createApi({
         getAllItems: builder.query({
             query: () => "books"
         }),
-    })
+        getByName: builder.query({
+            query: ({ bookName }) => `${bookName}`
+        })
+    }),
+
 
 })
 

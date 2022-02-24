@@ -1,20 +1,20 @@
 .bookWrapper {
   border: 1px solid lightgray;
   border-radius: 8px;
-  width: 33%;
-  margin: 0.5rem auto;
+  margin: 0.5rem 1rem 0.5rem 0;
   cursor: pointer;
   transform: all;
-  transition: 1s;
-
+  transition: 0.2s;
+  max-width: 10vw;
   img {
     height: 200px;
-    width: 200px;
+    width: 180px;
     object-fit: contain;
   }
   &:hover {
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
       rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    border: 2px solid aquamarine;
     img {
       backdrop-filter: blur(5px);
     }
@@ -26,6 +26,7 @@
       justify-content: center;
       align-items: center;
       color: white;
+      width: 100%;
     }
   }
 }

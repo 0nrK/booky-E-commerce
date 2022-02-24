@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import CartItem from '../components/CartItem/CartItem';
 import Navbar from '../components/Navbar/Navbar';
 import "./Cart.scss"
@@ -7,8 +7,15 @@ import { useSelector } from "react-redux";
 
 const Cart = () => {
 
+    const [cartData, setCartData] = useState([])
 
     const items = useSelector((state) => state.cart.cartItems)
+
+    useEffect(() => {
+        setCartData(items)
+    }, [items])
+
+
     return <main className="cart">
         <div className="cartWrapper">
             <h1>Cart</h1>
@@ -20,7 +27,7 @@ const Cart = () => {
                 <span className="cartHeadQuantity">Quantity</span>
                 <span className="cartHeadTotal">Total</span>
             </div>
-            {items.map((item) => {
+            {cartData.map((item) => {
                 return (
                     <CartItem key={item._id} props={item} />
                 )

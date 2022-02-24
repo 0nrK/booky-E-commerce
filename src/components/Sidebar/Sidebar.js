@@ -18,27 +18,26 @@ const Sidebar = () => {
                     </svg>
                 </div>
                 {isCatActive &&
-                    <div className="sidebarCategoryList">
-                        <p>Arts & Photography</p>
-                        <p>Engineering & Transportation</p>
-                        <p>Business & Money</p>
-                        <p>Computers & Technology</p>
-                        <p>Cookbooks, Food & Wine</p>
-                        <p>Education & Teaching</p>
-                        <p>Crafts, Hobbies & Home</p>
-                        <p>Comics & Graphic Novels</p>
-                        <p>Health, Fitness & Dieting</p>
-                        <p>History</p>
-                        <p>Humor & Entertainment</p>
-                        <p>Science & Math</p>
-                        <p>Mystery, Thriller & Suspense</p>
-                        <p>Literature & Fiction</p>
-                        <p>Science Fiction & Fantasy</p>
-                        <p>Teen & Young Adult</p>
-                        <p>Sports & Outdoors</p>
-                        <p>Test Preparation</p>
-                        <p>Travel</p>
-                    </div>
+                    <form className="sidebarCategoryList">
+                        <div className="sidebarCategoryListItem">
+                            <label>Arts & Photography</label>
+                            <input type="checkbox"></input>
+                        </div>
+                        <div className="sidebarCategoryListItem">
+                            <label>Engineering & Transportation</label>
+                            <input type="checkbox"></input>
+                        </div>
+                        <div className="sidebarCategoryListItem">
+                            <label> DENEME </label>
+                            <input type="checkbox"></input>
+                        </div>
+                        <div className="sidebarCategoryListItem">
+
+                            <label>DENEME</label>
+                            <input type="checkbox"></input>
+                        </div>
+
+                    </form>
                 }
             </div>
         </div>

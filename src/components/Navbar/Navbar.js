@@ -1,12 +1,17 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import "./Navbar.scss"
 import { Link } from "react-router-dom"
 import { useSelector } from 'react-redux';
 
 
 const Navbar = () => {
-    const items = useSelector((state) => state.items);
+    const [user, setUser] = useState()
+    const cartItems = useSelector((state) => state.cart.cartItems);
 
+    useEffect(() => {
+        const token = localStorage.getItem("token")
+        setUser(token)
+    }, [])
     return (
         <nav className="navbarContainer">
             <div className="navbarWrapper">
@@ -17,10 +22,12 @@ const Navbar = () => {
                 </div>
                 <div className="navbarRight">
                     <div className="navbarCart">
-
-                        <div className="navbarCartQty">
-                            <span>3</span>
-                        </div>
+                        {
+                            cartItems &&
+                            <div className="navbarCartQty">
+                                <span>{cartItems.length}</span>
+                            </div>
+                        }
 
                         <Link to="/cart">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -28,17 +35,28 @@ const Navbar = () => {
                             </svg>
                         </Link>
                     </div>
-                    <Link to="/register">
+                    {user ?
+
                         <button>
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                                 <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd" />
                             </svg>
-                            REGISTER / LOGIN
+                            LOGOUT
                         </button>
-                    </Link>
+                        :
+
+                        <Link to="/register">
+                            <button>
+                                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd" />
+                                </svg>
+                                REGISTER / LOGIN
+                            </button>
+                        </Link>
+                    }
                 </div>
             </div>
-        </nav>
+        </nav >
     )
 };
 
